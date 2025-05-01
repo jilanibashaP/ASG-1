@@ -1,4 +1,4 @@
-FROM oven/bun:latest
+FROM node:18-alpine
 
 WORKDIR /app
 
@@ -8,4 +8,4 @@ RUN bun install
 
 EXPOSE 3000
 
-CMD ["bun", "bin.ts"]
+CMD ["node", "app.js"]

@@ -1,12 +1,12 @@
 import cluster from "cluster";
 import os from "os";
-import { app } from "./index";
+import app from "./index.js"; // ✅ Fix: relative path with extension
+
 const numCPUs = os.cpus().length;
 
 if (cluster.isPrimary) {
     console.log(`Master ${process.pid} is running`);
 
-    // Fork workers.
     for (let i = 0; i < numCPUs; i++) {
         cluster.fork();
     }
