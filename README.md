@@ -20,3 +20,6 @@ node app.js
 3) We need to create a launch template (here, we need to specify the security groups, EC2 machine type, secret file, RAM, and everything required to start the instance).
 
 From the EC2 instance, we created the image, and from the image, we created the launch template.
+
+
+Then, we need to create the load balancer, which will forward the requests to the corresponding machine.
